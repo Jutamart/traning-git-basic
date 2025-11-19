@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/global.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>My Dashboard</h2>
+        <div class="menu">
+            <a href="home.html">Dashboard</a>
+            <a href="#">About</a>
+            <a href="#">Reports</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Card + Chart -->
+        <div class="card">
+            <h1>Dashboard</h1>
+            <h4>จำนวนผู้ใช้งานรายเดือน</h4>
+            <canvas id="myChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- ChartJS Code -->
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+          datasets: [{
+            label: "Users",
+            data: [150, 220, 180, 260, 300, 350],
+            borderWidth: 2,
+          }]
+        },
+      });
+    </script>
+
+</body>
+</html>
