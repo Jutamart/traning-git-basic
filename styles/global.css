@@ -1,0 +1,134 @@
+/* ------------------------------
+   GLOBAL COOL BLUE THEME
+------------------------------ */
+:root {
+  --bg: #f3f7fa;
+  --sidebar-bg: #1f2e46;
+  --sidebar-hover: #2d435c;
+  --primary: #3fa9f5;
+  --primary-dark: #268fdb;
+  --text: #102337;
+  --white: #ffffff;
+}
+
+/* ------------------------------
+   BASE
+------------------------------ */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------------------------------
+   SIDEBAR
+------------------------------ */
+.sidebar {
+  width: 260px;
+  background: var(--sidebar-bg);
+  color: var(--white);
+  padding: 25px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.sidebar h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: var(--white);
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.menu a:hover {
+  background: var(--sidebar-hover);
+}
+
+/* ------------------------------
+   MAIN LAYOUT
+------------------------------ */
+.main {
+  margin-left: 260px;
+  flex: 1;
+  padding: 22px;
+  overflow-y: auto;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ------------------------------
+   TOPBAR
+------------------------------ */
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.btn-profile {
+  background: var(--primary);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.btn-profile:hover {
+  background: var(--primary-dark);
+}
+
+/* ------------------------------
+   CARD
+------------------------------ */
+.card {
+  background: var(--white);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 22px;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .main {
+    margin-left: 0;
+  }
+}
